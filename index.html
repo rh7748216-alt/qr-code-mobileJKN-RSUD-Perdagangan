@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengarahkan ke Mobile JKN...</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var playStoreUrl = "https://play.google.com/store/apps/details?id=app.bpjs.mobile";
+            var intentUrl = "intent://app.bpjs.mobile#Intent;scheme=mobilejkn;package=app.bpjs.mobile;end;";
+            
+            // Coba buka aplikasi
+            window.location.href = intentUrl;
+            
+            // Jika aplikasi tidak ada, alihkan ke Play Store dalam 2 detik
+            setTimeout(function() {
+                window.location.href = playStoreUrl;
+            }, 2000);
+        };
+    </script>
+</head>
+<body style="text-align: center; font-family: Arial, sans-serif; padding-top: 50px;">
+    <h3>Sedang memuat Mobile JKN...</h3>
+    <p>Jika Anda tidak otomatis diarahkan, <a href="https://play.google.com/store/apps/details?id=app.bpjs.mobile">klik di sini</a>.</p>
+</body>
+</html>
