@@ -3,22 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buka Mobile JKN</title>
+    <title>Mobile JKN - RSUD Perdagangan</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            padding-top: 60px;
-            background-color: #f4f7f6;
+            padding-top: 40px;
+            background-color: #f8f9fa;
             color: #333;
         }
         .container {
-            max-width: 400px;
+            max-width: 380px;
             margin: 0 auto;
-            background: #fff;
-            padding: 30px;
+            background: #ffffff;
+            padding: 30px 20px;
             border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 25px;
         }
         .btn {
             display: block;
@@ -31,6 +40,7 @@
             border-radius: 8px;
             color: #fff;
             box-sizing: border-box;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
         }
         .btn-app {
             background-color: #28a745;
@@ -42,10 +52,10 @@
 </head>
 <body>
     <div class="container">
-        <h2>Mobile JKN RSUD Perdagangan</h2>
-        <p>Silakan pilih tombol di bawah ini:</p>
+        <h2>Mobile JKN</h2>
+        <p>RSUD Perdagangan</p>
         
-        <!-- Tombol untuk langsung buka aplikasi jika sudah terinstal -->
+        <!-- Tombol memicu buka aplikasi -->
         <a href="intent://app.bpjs.mobile#Intent;scheme=mobilejkn;package=app.bpjs.mobile;end;" class="btn btn-app">Buka Aplikasi Mobile JKN</a>
         
         <!-- Tombol cadangan ke Play Store -->
