@@ -3,61 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buka Mobile JKN</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding-top: 50px;
-            background-color: #f4f7f6;
-            color: #333;
-        }
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 14px 0;
-            margin: 15px 0;
-            font-size: 16px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 8px;
-            color: #fff;
-            box-sizing: border-box;
-        }
-        .btn-app {
-            background-color: #28a745;
-        }
-        .btn-store {
-            background-color: #007bff;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h2>Mobile JKN RSUD Perdagangan</h2>
-        <p>Silakan pilih tombol di bawah untuk melanjutkan:</p>
-        
-        <!-- Menggunakan skema langsung agar lebih mudah dipicu -->
-        <a href="mobilejkn://" class="btn btn-app" onclick="tryOpenApp(event)">Buka Aplikasi Mobile JKN</a>
-        
-        <a href="https://play.google.com/store/apps/details?id=app.bpjs.mobile" class="btn btn-store">Download di Play Store</a>
-    </div>
-
-    <script>
-        function tryOpenApp(e) {
-            // Memberikan jeda agar skema terbuka, jika gagal diarahkan ke Play Store sebagai opsi aman
+    <title>Mengarahkan ke Mobile JKN...</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var playStoreUrl = "https://play.google.com/store/apps/details?id=app.bpjs.mobile";
+            var intentUrl = "intent://app.bpjs.mobile#Intent;scheme=mobilejkn;package=app.bpjs.mobile;end;";
+            
+            // Coba buka aplikasi
+            window.location.href = intentUrl;
+            
+            // Jika dalam waktu 2 detik tidak terbuka, alihkan ke Play Store
             setTimeout(function() {
-                window.location.href = "https://play.google.com/store/apps/details?id=app.bpjs.mobile";
-            }, 1000);
-        }
+                window.location.href = playStoreUrl;
+            }, 2000);
+        };
     </script>
+</head>
+<body style="text-align: center; font-family: Arial, sans-serif; padding-top: 50px;">
+    <h3>Sedang memuat Mobile JKN...</h3>
+    <p>Jika Anda tidak otomatis diarahkan, <a href="https://play.google.com/store/apps/details?id=app.bpjs.mobile">klik di sini</a>.</p>
 </body>
 </html>
